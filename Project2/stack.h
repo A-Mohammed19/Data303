@@ -1,23 +1,24 @@
 #pragma once
+#include <iostream>
 #include <vector>
-#include<iostream>
 using namespace std;
 
 class Stack {
 private:
-	std::vector<int> values ;
+	std::vector<int> values;
+
 public:
-    // Constructor 
-   Stack();
+	// Constructor
+	Stack();
 
-    // Destructor
-    ~Stack();
+	// Destructor
+	~Stack();
 
-    //Member Functions
-    void push(int val); 
-    void pop(); 
-    int& top();
-    bool empty(); 
-    double avg(); 
-    void print();
+	// Member Functions
+	void push(int val);
+	void pop();
+	int& top();
+	bool empty();
+	double avg();
+	void print();
 };

@@ -1,31 +1,30 @@
 #pragma once
-#include <iostream>
 #include <cstddef>
-using namespace std; 
+#include <iostream>
+using namespace std;
 
-//the class for the single_linked_list 
-template <typename Item_Type>
+// the class for the single_linked_list
 class Single_Linked_List {
 private:
     struct Node {
-        Item_Type data; 
+        int data;
         Node* next;
-   };
+    };
     Node* head;
     Node* tail;
     size_t num_items;
 
 public:
-    // Constructor 
+    // Constructor
     Single_Linked_List();
 
     // Destructor
     ~Single_Linked_List();
 
     // Member functions
-    void push_front( Item_Type item);
+    void push_front(int item);
 
-    void push_back(Item_Type item);
+    void push_back(int item);
 
     void pop_front();
 
@@ -37,12 +36,11 @@ public:
 
     bool empty();
 
-    void insert(size_t index,const Item_Type& item);
+    void insert(size_t index, const int& item);
 
-    bool remove(std::size_t index);
+    bool remove(size_t index);
 
-    size_t find(const Item_Type& item);
+    size_t find(const int& item);
 
-    void print(); 
-
+    void print();
 };
